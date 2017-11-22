@@ -1,0 +1,43 @@
+{
+  "name": "start-project",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "webpack-dev-server --config ./webpack/webpack.config.js",
+    "build": "webpack --config ./webpack/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CdSy/start-project.git"
+  },
+  "author": "Alex",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CdSy/start-project/issues"
+  },
+  "homepage": "https://github.com/CdSy/start-project#readme",
+  "dependencies": {
+    "css-loader": "^0.28.7",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.5",
+    "lodash": "^4.17.4",
+    "style-loader": "^0.18.2"
+  },
+  "devDependencies": {
+    "@webpack-blocks/assets": "^1.0.0-rc",
+    "@webpack-blocks/core": "^1.0.0-rc",
+    "autoprefixer": "^7.1.6",
+    "ava": "^0.22.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "html-webpack-plugin": "^2.30.1",
+    "postcss-loader": "^2.0.8",
+    "standard": "^10.0.3",
+    "webpack": "^3.8.1",
+    "webpack-blocks": "^1.0.0-rc.2",
+    "webpack-dev-server": "^2.9.1"
+  }
+}
