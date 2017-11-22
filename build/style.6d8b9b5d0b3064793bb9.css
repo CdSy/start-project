@@ -1,0 +1,19 @@
+.card {
+  width: 200px;
+  height: 300px;
+  -webkit-box-shadow: 0 2px 8px 0 rgba(10, 10, 10, 0.15);
+          box-shadow: 0 2px 8px 0 rgba(10, 10, 10, 0.15);
+  background-image: url(1eeab0cf9029e25e61110f96c474fe5c.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+h1 {
+  font-size: 36px;
+  text-align: center;
+  color: #994d4d;
+}
+
+/*# sourceMappingURL=style.6d8b9b5d0b3064793bb9.css.map*/

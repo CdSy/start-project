@@ -1,8 +1,10 @@
 const webpack = require('webpack')
 const path = require('path');
 const autoprefixer = require('autoprefixer');
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const less = require('./less-loader')
+const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const less = require('./less-loader');
 const {
   createConfig,
   match,
@@ -21,7 +23,7 @@ const {
 
 module.exports = createConfig([
   entryPoint('./src/js/app.es6'),
-  setOutput('./build/bundle.js'),
+  setOutput('./build/bundle.[hash].js'),
   match(/\.(js|es6)$/, { exclude: path.resolve('node_modules') }, [
     babel()
   ]),
@@ -40,9 +42,12 @@ module.exports = createConfig([
     ])
   ]),
   addPlugins([
+    new WebpackCleanupPlugin(),
     new HtmlWebpackPlugin({
       inject: true,
+      filename: '../index.html',
       template: './src/index.html'
-    })
+    }),
+    new ExtractTextPlugin('style.[hash].css')
   ])
 ])

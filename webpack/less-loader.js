@@ -1,4 +1,5 @@
-const omit = require('lodash/omit')
+const omit = require('lodash/omit');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = less
 
@@ -16,28 +17,29 @@ function less (options) {
     return util.addLoader(
       Object.assign({
         test: /\.less$/,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              sourceMap: !!options.sourceMap,
-              minimize: options.minimize
-            }
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              config: {
-                path: 'postcss.config.js'
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            {
+              loader: 'css-loader',
+              options: {
+                sourceMap: !!options.sourceMap,
+                minimize: options.minimize
               }
+            },
+            {
+              loader: 'postcss-loader',
+              options: {
+                config: {
+                  path: 'postcss.config.js'
+                }
+              }
+            },
+            {
+              loader: 'less-loader',
+              options: lessOptions
             }
-          },
-          {
-            loader: 'less-loader',
-            options: lessOptions
-          }
-        ]
+        ]})
       }, context.match)
     )
   }
