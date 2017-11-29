@@ -1,0 +1,579 @@
+.fixed-header {
+    position: fixed;
+    min-height: 128px;
+    width: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-left: 125px;
+    background-color: #fff;
+    border-bottom: 5px solid #eee3c0;
+    box-sizing: border-box;
+    z-index: 100;
+    opacity: 0;
+    transform: translateY(-100%);
+    box-shadow: 0 3px 8px 0 rgba(238,227,192, 0.6);
+    transition: transform 0s linear 0.32s, opacity 0.3s ease;
+
+    @media (max-width: 1023px) {
+        padding-left: 0;
+    }
+
+    &.visible {
+        opacity: 1;
+        transform: translateY(0);
+        transition: transform 0s linear, opacity 0.3s ease;
+    }
+
+    @media (max-width: 767px) {
+        padding-top: 10px;
+    }
+
+    .abbr-logo {
+        position: absolute;
+        left: 35px;
+
+        @media (max-width: 1023px) {
+            display: none;
+        }
+    }
+
+    .logo {
+        margin-right: 10px;
+        margin-bottom: 0;
+        text-align: start;
+
+        @media (max-width: 750px) {
+            margin-right: 0;
+        }
+
+        .votre-image {
+            width: 40px;
+            margin-left: 30px;
+
+            @media (max-width: 750px) {
+                margin-bottom: 3px;
+                margin-left: 47px;
+            }
+
+            @media (max-width: 480px) {
+                display: none;
+            }
+        }
+
+        .large-text {
+            font-size: 30px;
+            font-family: "ITCAvantGardeStd-BkCn";
+            text-transform: uppercase;
+            letter-spacing: 11px;
+
+            @media (max-width: 750px) {
+                font-size: 26px;
+                margin-left: 21px;
+                letter-spacing: 9px;
+            }
+            
+            @media (max-width: 480px) {
+                display: none;
+            }
+        }
+
+        .small-text {
+            margin-left: 6px;
+            font-size: 14px;
+            line-height: 19px;
+            font-family: "ITCAvantGardeStd-MdCn";
+
+            @media (max-width: 750px) {
+                margin-left: 26px;
+                font-size: 12px;
+                line-height: 12px;
+            }
+
+            @media (max-width: 480px) {
+                text-align: center;
+                margin-left: 0;
+            }
+        }
+    }
+
+    .items-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4px;
+        box-sizing: border-box;
+    }
+
+    .mock-items {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4px;
+    }
+
+    .empty-item {
+        display: inline-block;
+        width: 95px;
+        height: 103px;
+        background-color: #f7f7f7;
+        margin: 9px 4px;
+        vertical-align: middle;
+        box-sizing: border-box;
+
+        @media (max-width: 480px) {
+            width: 70px;
+            height: 75px;
+        }
+    }
+    
+    .item {
+        position: relative;
+        display: inline-block;
+        width: 95px;
+        height: 103px;
+        margin: 9px 4px;
+        background-size: cover;
+        border: 2px solid #eee3c0;
+        box-sizing: border-box;
+        vertical-align: middle;
+
+        @media (max-width: 480px) {
+            width: 70px;
+            height: 75px;
+        }
+
+        .small-cross {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            width: 8px;
+            height: 10px;
+            background-image: url('../../images/small-cross.png');
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: opacity 0.15s ease;
+            cursor: pointer;
+
+            @media (max-width: 1023px) {
+                opacity: 1;
+            }
+
+            &::before {
+                display: block;
+                width: 16px;
+                height: 20px;
+                position: absolute;
+                top: -50%;
+                left: -50%;
+                content: '';
+                cursor: pointer;
+            }
+        }
+
+        &:hover {
+            .small-cross {
+                opacity: 1;
+            }
+        }
+    }
+
+    .button-wrapper {
+        margin-left: 12px;
+        margin-bottom: 22px;
+        align-self: flex-end;
+        color: #939496;
+        font-size: 12px;
+        font-family: "ITCAvantGardeStd-MdCn";
+
+        .text {
+            line-height: 8px;
+        }
+
+        @media (max-width: 836px) {
+            margin-left: 0;
+        }
+
+        @media (max-width: 480px) {
+            margin-bottom: 8px;
+            margin-top: -10px;
+        }
+    }
+
+    .text-string {
+        margin-left: 12px;
+        font-size: 12px;
+        color: #939496;
+        font-family: "ITCAvantGardeStd-MdCn";
+    }
+
+    .button {
+        display: block;
+        width: 167px;
+        height: 35px;
+        margin: 14px auto 17px;
+        padding: 0 10px;
+        color: #fff;
+        font-family: "ITCAvantGardeStd-BoldCn";
+        background-color: #000;
+        text-align: center;
+        outline: none;
+        -webkit-appearance: none;
+        text-transform: uppercase;
+        box-sizing: border-box;
+        cursor: pointer;
+        transition: background-color 0.15s ease;
+        
+        .text {
+            vertical-align: sub;
+        }
+
+        &:hover {
+            background-color: #1d1c1d;
+        }
+
+        &[disabled] {
+            cursor: default;
+
+            &:hover {
+                background-color: #000;
+            }
+        }
+    }
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    outline: 0;
+
+    &.in .modal-dialog {
+        position: absolute;
+        top: 80px;
+        left: 50%;
+        padding: 22px;
+        opacity: 1;
+        transform: translateX(-50%);
+        background-image: url('../../images/popup-bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.modal-dialog {
+    position: relative;
+    width: 750px;
+    opacity: 0;
+    box-sizing: border-box;
+    transition: opacity 0.3s ease;
+    z-index: 2000;
+
+    @media(max-width: 749px) {
+        width: 100%;
+    }
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    border: 4px solid #eee3c0;
+    font-family: "ITCAvantGardeStd-BkCn";
+
+    .top-logo {
+        position: absolute;
+        top: -91px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .close-cross {
+        display: block;
+        width: 28px;
+        height: 38px;
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        background-image: url('../../images/cross-icon.png');
+        cursor: pointer;
+    }
+
+    .items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+
+        .item {
+            width: 95px;
+            height: 103px;
+            margin: 9px 8px;
+            background-size: cover;
+            border: 2px solid #eee3c0;
+            box-sizing: border-box;
+
+            @media (max-width: 750px) {
+                width: 21.5%;
+                height: auto;
+
+                &::after {
+                    display: block;
+                    padding-top: 109%;
+                    content: '';
+                }
+            }
+
+            @media (max-width: 495px) {
+                width: 60px;
+                height: 64px;
+                margin: 9px 2px;
+            }
+
+            // &:last-child {
+            //     margin-right: 0;
+            // }
+        }
+    }
+
+    // .main-title {
+    //     margin-top: 24px;
+    // }
+    
+    .description {
+        margin: 4px 0 13px;
+        font-size: 14px;
+        // margin-left: -22px;
+        font-family: "ITCAvantGardeStd-MdCn";
+        text-align: center;
+    }
+
+    .f-form {
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 36px;
+
+        @media(max-width: 750px) {
+            padding: 0 20px;
+        }
+
+        .f-field {
+            width: 320px;
+            margin: 0 auto 26px;
+
+            @media(max-width: 750px) {
+                width: 100%;
+            }
+        }
+
+        .label {
+            margin-bottom: 7px;
+            font-size: 16px;
+            text-transform: uppercase;
+            text-align: center;
+            font-family: "ITCAvantGardeStd-BoldCn";
+        }
+
+        .input {
+            width: 320px;
+            border: 1px solid #666666;
+            padding: 8px;
+            outline: none;
+            text-align: center;
+            box-sizing: border-box;
+            font-family: "ITCAvantGardeStd-BkCn";
+            font-size: 14px;
+            line-height: 18px;
+            color: #000;
+
+            @media(max-width: 750px) {
+                width: 100%;
+            }
+
+            &::placeholder {
+                color: #777677;
+            }
+
+            &.ng-dirty.ng-invalid + .alert-danger {
+                opacity: 1;
+            }
+        }
+
+        .alert-danger {
+            position: absolute;
+            font-size: 12px;
+            line-height: 20px;
+            color: rgb(194, 45, 45);
+            opacity: 0;
+        }
+
+        .textarea {
+            width: 320px;
+            height: 124px;
+            border: 1px solid #666666;
+            padding: 35px;
+            outline: none;
+            resize: none;
+            box-sizing: border-box;
+            font-family: "ITCAvantGardeStd-BkCn";
+            font-size: 14px;
+            line-height: 18px;
+            color: #000;
+
+            @media(max-width: 750px) {
+                width: 100%;
+            }
+
+            &::placeholder {
+                color: #777677;
+            }
+        }
+    }
+
+    .italic-text-image {
+        width: 65px;
+        margin-bottom: 0;
+    }
+
+    .button {
+        display: block;
+        width: 172px;
+        margin: 14px auto 30px;
+        padding: 10px;
+        color: #fff;
+        font-family: "ITCAvantGardeStd-BoldCn";
+        background-color: #000;
+        text-align: center;
+        outline: none;
+        text-transform: uppercase;
+        box-sizing: border-box;
+        cursor: pointer;
+        transition: background-color 0.15s ease;
+
+        &:hover {
+            background-color: #1d1c1d;
+        }
+
+        &.wide {
+            width: 222px;
+            margin: -5px auto 40px;
+        }
+
+        &[disabled] {
+            cursor: default;
+
+            &:hover {
+                background-color: #000;
+            }
+        }
+    }
+
+    .main-title {
+        margin-top: 5px;
+
+        span {
+            margin-top: -11px;
+            // margin-left: 9px;
+            letter-spacing: 20px;
+            font-size: 53px;
+
+            @media (max-width: 480px) {
+                font-size: 30px;
+                line-height: 40px;
+            }
+        }
+    }
+}
+
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.fade {
+    opacity: 0;
+    transition: opacity .15s linear;
+
+    &.show {
+        opacity: 1;
+        transition: opacity .25s linear;
+    }
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 53px;
+
+    .icon {
+        width: 35px;
+        height: 37px;
+        margin: 0 7px;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        &.facebook {
+            background-image: url('../../images/facebook-icon.png');
+        }
+
+        &.twitter {
+            background-image: url('../../images/twitter-icon.png');
+        }
+    }
+}
+
+.success-text {
+    margin-top: 26px;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    font-family: "ITCAvantGardeStd-MdCn";
+
+    .title {
+        font-family: "ITCAvantGardeStd-BoldCn";
+        font-size: 16px;
+        line-height: 23px;
+        text-transform: uppercase;
+    }
+
+    .email {
+        font-size: 13px;
+        margin-top: 7px;
+        font-family: "ITCAvantGardeStd-BkCn";
+    }
+
+    .divider {
+        width: 95px;
+        height: 4px;
+        margin: 28px auto;
+        background-color: #000;
+    }
+}
+
+ngbd-modal-content {
+    width: 100%;
+}

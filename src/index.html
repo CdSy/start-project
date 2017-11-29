@@ -7,7 +7,132 @@
     <title>Start template</title>
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <div class="card"></div>
+    <div class="fixed-header js-sticky-element">
+        <img src="./assets/images/abbr-logo.png" alt="YSL" class="abbr-logo">
+        <div class="logo">
+          <img src="./assets/images/votre-black.png" alt="votre" class="votre-image">
+          <div class="large-text">wishlist</div>
+          <div class="small-text">Votre sélection de produits YSL</div>
+        </div>
+        <div class="mock-items">
+          <div class="empty-item"></div>
+          <div class="empty-item"></div>
+          <div class="empty-item"></div>
+          <div class="empty-item"></div>
+          <div class="items-wrapper">
+            <div class="item" style="background-image: url('./assets/images/pomade.png')">
+              <div class="small-cross"></div>
+            </div>
+            <div class="item" style="background-image: url('./assets/images/pomade.png')">
+              <div class="small-cross"></div>
+            </div>
+            <div class="item" style="background-image: url('./assets/images/pomade.png')">
+              <div class="small-cross"></div>
+            </div>
+          </div>
+        </div>
+        <div class="button-wrapper">
+           <button class="button js-modal-trigger">  
+            <span class="text">envoyer ma wishlist</span>
+          </button>
+          <div class="text">Vous avez 3 produits dans votre wislist</div>
+        </div>
+    </div>
+
+    <div class="modal" id="form-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="top-logo">
+                  <img src="./assets/images/logo.png" alt="">
+                </div>
+                <div class="main-title black">
+                  <img src="./assets/images/votre-black.png" class="italic-text-image" alt="">
+                  <span>wish</span>
+                  <span>list</span>
+                </div>
+                <div class="description">
+                  Votre sélection de produits YSL
+                </div>
+                <div class="items">
+                  <div class="item" 
+                       style="background-image: url('./assets/images/pomade.png')">
+                  </div>
+                  <div class="item" 
+                       style="background-image: url('./assets/images/pomade.png')">
+                  </div>
+                </div>
+                <form class="f-form js-form">
+                  <div class="f-field">
+                    <div class="label">
+                      Envoyer ma wishlist à
+                    </div>
+                    <input type="email" 
+                           name="email"
+                           placeholder="email" 
+                           class="input"
+                           pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                           required>
+                    <!-- <div [hidden]="emailRef.valid"
+                         class="alert-danger">
+                      Email is required
+                    </div> -->
+                  </div>
+                  <div class="f-field">
+                    <div class="label">
+                      Laissez-lui un message
+                    </div>
+                    <textarea placeholder="Votre message" [(ngModel)]="message" name="message" class="textarea"></textarea>
+                  </div>
+                  <button class="button wide" type="submit">
+                    Envoyer ma wishlist à
+                  </button>
+                </form>
+                <div class="close-cross" data-dismiss="modal"></div>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal" id="success-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="top-logo">
+                <img src="./assets/images/logo.png" alt="">
+            </div>
+            <div class="main-title black">
+              <img src="./assets/images/votre-black.png" class="italic-text-image" alt="">
+              <span>wish</span>
+              <span>list</span>
+            </div>
+            <div class="description">
+              Votre sélection de produits YSL
+            </div>
+            <div class="items">
+                <div class="item" 
+                     style="background-image: url('./assets/images/pomade.png')">
+                </div>
+                <div class="item" 
+                     style="background-image: url('./assets/images/pomade.png')">
+                </div>
+            </div>
+            <div>
+              <div class="success-text">
+                <div class="title">merci !</div>
+                Votre sélection de produits YSL a été envoyée à
+                <div class="email">angelique.stern@avent-media.fr</div>
+                <div class="divider"></div>
+                <div class="title">invitez vos amiEs <br> à créer leur wishlist</div>
+              </div>
+              <button class="button">
+                JE PARTAGE
+              </button>
+              <div class="socials">
+                <a href="#" class="icon facebook"></a>
+                <a href="#" class="icon twitter"></a>
+              </div>
+            </div>
+            <div class="close-cross" data-dismiss="modal"></div>
+          </div>
+        </div>
+    </div>
 </body>
 </html>

@@ -19,11 +19,21 @@ const {
   env,
   setOutput,
   sourceMaps
-} = require('webpack-blocks')
+} = require('webpack-blocks');
+const TARGET = process.env.npm_lifecycle_event;
+let templatePath;
+
+if (TARGET ===  'start') {
+  templatePath = './index.html';
+}
+
+if (TARGET === 'build') {
+  templatePath = '../index.html';
+}
 
 module.exports = createConfig([
   entryPoint('./src/js/app.es6'),
-  setOutput('./build/bundle.[hash].js'),
+  setOutput('./build/[name].js'),
   match(/\.(js|es6)$/, { exclude: path.resolve('node_modules') }, [
     babel()
   ]),
@@ -43,11 +53,16 @@ module.exports = createConfig([
   ]),
   addPlugins([
     new WebpackCleanupPlugin(),
+    new webpack.optimize.CommonsChunkPlugin('common'),
     new HtmlWebpackPlugin({
       inject: true,
-      filename: '../index.html',
+      filename: templatePath,
       template: './src/index.html'
     }),
-    new ExtractTextPlugin('style.[hash].css')
+    new ExtractTextPlugin('style.css'),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
+    })
   ])
 ])
