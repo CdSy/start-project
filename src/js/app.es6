@@ -1,8 +1,3 @@
-// import 'masonry-layout/dist/masonry.pkgd.min.js';
-// import '../assets/js/imagesloaded.js';
-// import '../assets/js/classie.js';
-// import '../assets/js/AnimOnScroll.js';
-// import '../assets/js/modernizr.custom.js';
 import 'bootstrap-less/js/modal.js';
 import  '../less/main.less';
 
