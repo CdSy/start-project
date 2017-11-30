@@ -7,7 +7,7 @@
     <title>Start template</title>
 </head>
 <body>
-    <div class="fixed-header js-sticky-element">
+    <div class="fixed-header js-sticky-element js-shopping-cart">
         <img src="./assets/images/abbr-logo.png" alt="YSL" class="abbr-logo">
         <div class="logo">
           <img src="./assets/images/votre-black.png" alt="votre" class="votre-image">
@@ -19,23 +19,47 @@
           <div class="empty-item"></div>
           <div class="empty-item"></div>
           <div class="empty-item"></div>
-          <div class="items-wrapper">
-            <div class="item" style="background-image: url('./assets/images/pomade.png')">
-              <div class="small-cross"></div>
+          <div class="items-wrapper js-render-place">
+            <!-- <div class="item js-product-item" style="background-image: url('./assets/images/pomade.png')">
+              <div class="small-cross js-removing-button"></div>
             </div>
-            <div class="item" style="background-image: url('./assets/images/pomade.png')">
-              <div class="small-cross"></div>
+            <div class="item js-product-item" style="background-image: url('./assets/images/pomade.png')">
+              <div class="small-cross js-removing-button"></div>
             </div>
-            <div class="item" style="background-image: url('./assets/images/pomade.png')">
-              <div class="small-cross"></div>
-            </div>
+            <div class="item js-product-item" style="background-image: url('./assets/images/pomade.png')">
+              <div class="small-cross js-removing-button"></div>
+            </div> -->
           </div>
         </div>
         <div class="button-wrapper">
            <button class="button js-modal-trigger">  
             <span class="text">envoyer ma wishlist</span>
           </button>
-          <div class="text">Vous avez 3 produits dans votre wislist</div>
+          <div class="text">Vous avez <span class="js-product-counter">0</span> produits dans votre wislist</div>
+        </div>
+    </div>
+
+    <div class="card grid-item card-white js-product-card" data-id="1" data-thumbnail="./assets/images/pomade.png">
+        <img src="./assets/images/pomade.png" alt="">
+        <div class="card-title">
+          <span>
+          <!--{{brick.title}}-->
+            1
+            ROUGE PUR COUTURE COLLECTOR
+          </span>
+          <span>
+            <!--{{brick.titleTwo}}-->
+            Dazzling Lights
+          </span>
+          <div class="card-number">
+            <!--{{brick.titleNumber}}-->
+            N°13 Le Orange
+          </div>
+        </div>
+        <div class="card-hover">
+          <a href="" class="card-btn js-adding-button">
+            ajouter à ma wishlist
+          </a>
         </div>
     </div>
 
@@ -53,13 +77,13 @@
                 <div class="description">
                   Votre sélection de produits YSL
                 </div>
-                <div class="items">
-                  <div class="item" 
+                <div class="items js-render-place">
+                  <!-- <div class="item" 
                        style="background-image: url('./assets/images/pomade.png')">
                   </div>
                   <div class="item" 
                        style="background-image: url('./assets/images/pomade.png')">
-                  </div>
+                  </div> -->
                 </div>
                 <form class="f-form js-form">
                   <div class="f-field">
@@ -106,13 +130,13 @@
             <div class="description">
               Votre sélection de produits YSL
             </div>
-            <div class="items">
-                <div class="item" 
+            <div class="items js-render-place">
+                <!-- <div class="item" 
                      style="background-image: url('./assets/images/pomade.png')">
                 </div>
                 <div class="item" 
                      style="background-image: url('./assets/images/pomade.png')">
-                </div>
+                </div> -->
             </div>
             <div>
               <div class="success-text">

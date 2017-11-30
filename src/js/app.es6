@@ -1,6 +1,9 @@
 import 'bootstrap-less/js/modal.js';
 import  '../less/main.less';
 
+import { ShoppingCart } from './components/ShoppingCart.es6';
+import { ProductCard } from './components/ProductCard.es6';
+
 window.$$ = window.$$ || {};
 
 function calculateScroll() {
@@ -22,14 +25,34 @@ function calculateScroll() {
     });
 }
 
+export class Application {
+    constructor() {
+        this.initShoppingCart();
+        this.initProductCard();
+    }
+
+    initShoppingCart() {
+        $('.js-shopping-cart').each(function() {
+            $$.window.store = new ShoppingCart($(this));
+        });
+    }
+
+    initProductCard() {
+        $('.js-product-card').each(function() {
+            new ProductCard($(this), $$.window.store);
+        });
+    }
+}
+
 $(function() {
     $$.window = $(window);
 	$$.body = $('body');
     $$.html = $('html');
     let formModal = $('#form-modal');
     let successModal = $('#success-modal');
+    const app = new Application();
 
-    function initModals(modal1, modal2) {
+    function initModals() {
         formModal.modal({show: false});
         successModal.modal({show: false});
     }
@@ -40,12 +63,16 @@ $(function() {
     
         form.on('submit', (event) => {
             event.preventDefault();
-            
+
             formModal.modal('hide');
             successModal.modal('show');
         });
 
         modalTrigger.on('click', () => {
+            if ($$.window.store.products.length === 0) {
+                return;
+            }
+
             formModal.modal('show');
         });
     }

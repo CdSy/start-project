@@ -37,7 +37,7 @@ module.exports = createConfig([
   match(/\.(js|es6)$/, { exclude: path.resolve('node_modules') }, [
     babel()
   ]),
-  match(['*.gif', '*.jpg', '*.jpeg', '*.png', '*.webp'], [
+  match(['*.gif', '*.jpg', '*.jpeg', '*.png', '*.webp', '*otf'], [
     file()
   ]),
   less(),
