@@ -9,12 +9,14 @@ export class ShoppingCart {
     cacheNodes() {
         this.nodes = {
             renderPlace: $('.js-render-place'),
-            counter: this.root.find('.js-product-counter')
+            counter: this.root.find('.js-product-counter'),
+            resetButton: $('.js-reset-cart')
         }
     }
 
     bindEvents() {
         this.root.on('click', (event) => this.removeProduct(event));
+        this.nodes.resetButton.on('click', () => this.clearCart());
     }
 
     addProduct(product) {
