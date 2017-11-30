@@ -1,9 +1,3 @@
-h1 {
-    font-size: 36px;
-    text-align: center;
-    color: rgb(153, 77, 77);
-}
-
 @font-face {
   font-family: "ITCAvantGardeStd-BkCn";
   src: url("../fonts/ITCAvantGardeStd-BkCn.otf");
@@ -21,121 +15,96 @@ h1 {
   src: url("../fonts/ITCAvantGardeStd-BoldCn.otf");
 }
   
-  body{
-    background: black;
+body {
+  background: black;
+}
   
-    &.modal-open {
-      overflow-x: hidden;
-      overflow-y: hidden;
-    }
-  }
-  .header{
-    padding-top: 17px;
-    margin-bottom: 56px;
-  }
-  .logo{
-    text-align: center;
-    margin-bottom: 31px;
-  }
-  .logo-mobile{
-    display: none;
+.container-fluid {
+  overflow: hidden;
+}
   
-    @media (max-width: 480px) {
-      width: 100%;
+  .header {
+    position: relative;
+    z-index: 10;
+    margin-top: 16px;
+    .logo {
+      margin-bottom: 36px;
+      text-align: center;
     }
-  }
-  .main-title{
-    text-transform: uppercase;
-    color: white;
-    text-align: center;
-    font-size: 50px;
-    font-family: "ITCAvantGardeStd-BkCn";
-    span{
-      display: block;
-      margin-top: -10px;
-      margin-left: 19px;
-      letter-spacing: 18px;
-      &:last-of-type{
-        margin-bottom: 5px;
+    .title {
+      margin: 0 auto 36px;
+      border-top: 1px solid white;
+      border-bottom: 1px solid white;
+      width: 215px;
+      padding-top: 20px;
+  
+      span {
+        text-transform: uppercase;
+        color: white;
+        font-size: 50px;
+        font-family: "ITCAvantGardeStd-BkCn";
+        letter-spacing: 18px;
+        margin-left: 15px;
+        display: block;
+  
+        &:last-of-type {
+          margin-top: -20px;
+        }
       }
     }
   
-    &.black {
-      color: #000;
-    }
+    .subtitle {
+      padding-top: 4px;
+      width: 685px;
+      margin: 0 auto 52px;
+      font-family: "ITCAvantGardeStd-BkCn";
+      color: white;
   
-    &:before{
-      content:"";
-      display: block;
-      height: 1px;
-      width:212px;
-      background-color: rgba(255, 255, 255, 0.28);
-      margin: auto;
-    }
-    &:after{
-      content:"";
-      display: block;
-      height: 1px;
-      width:212px;
-      background-color: rgba(255, 255, 255, 0.28);
-      margin: auto;
-    }
-    img{
-      margin-bottom: -3px;
+      span {
+        font-size: 26px;
+        font-weight: bold;
+        letter-spacing: 1.8px;
+        text-transform: uppercase;
+      }
+  
+      p {
+        font-size: 16px;
+      }
     }
   }
-  .under-title{
-    color: white;
-    width: 685px;
-    margin: auto;
-    text-align: center;
-    font-family: "ITCAvantGardeStd-BkCn";
   
-    @media (max-width: 750px) {
-      width: 100%;
-    }
-  
-    &>span{
-      display: inline-block;
-      margin-top: 46px;
-      margin-left: 11px;
-      letter-spacing: 1.8px;
-      text-transform: uppercase;
-      font-size: 26px;
-      font-weight: bold;
-      margin-bottom: 6px;
-    }
-    p{
-      margin-top: -2px;
-    }
-  }
-  .container{
-    width: 1105px;
+  .context {
     border: 6px solid white;
-    margin: auto;
-    box-sizing: border-box;
+    margin-top: 52px;
+    margin-left: -8px;
+    width: 97%;
     position: relative;
-    left: -26px;
-    padding-bottom: 85px;
-    &:after{
-      content: ".";
-      display: block;
-      clear: both;
-      visibility: hidden;
-      height: 0;
-    }
   }
-.card{
-    width:232px;
-    height:358px;
+  
+  .grid {
+    list-style: none;
+    padding: 0;
+    margin-top: 70px;
+    margin-left: 174px;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .grid-item {
+    //outline: 1px solid white;
+    margin-right: 24px;
+  }
+  .card {
+    height: 358px;
     box-sizing: border-box;
     border: 5px solid #eed99b;
     text-align: center;
-    padding-top: 23px;
-    position: relative;
+    padding-top: 8px;
     display: inline-block;
     margin-bottom: 30px;
     position: relative;
+    color: white;
+  
     &:after{
       content: "+";
       display: block;
@@ -149,10 +118,13 @@ h1 {
       padding-left: 6px;
       padding-bottom: 0px;
       font-size: 40px;
+      color: black;
       font-family: "ITCAvantGardeStd-BkCn";
     }
-    &:hover{
-      & .card-hover{
+  
+    &:hover {
+      cursor: pointer;
+      & .card-hover {
         width:232px;
         height: 358px;
       }
@@ -160,10 +132,27 @@ h1 {
         opacity: 0.3;
       }
     }
+    span{
+      font-family: "ITCAvantGardeStd-BoldCn";
+    }
+    span:first-of-type{
+  
+    }
+    span:last-of-type{
+      font-style: italic;
+    }
+    .card-title{
+      padding: 0 15px;
+  
+      .card-number {
+        font-size: 14px;
+        color: rgb(145,161,164);
+        font-family: "ITCAvantGardeStd-BkCn";
+        text-align: center;
+      }
+    }
   }
-  .porfum-title{
-    display: none;
-  }
+  
   .card-hover{
     overflow: hidden;
     position: absolute;
@@ -172,6 +161,11 @@ h1 {
     top: -5px;
     left: -5px;
     background-color: rgba(255,255,255,0.7);
+    img{
+      top: 41%;
+      left: 43%;
+      position: absolute;
+    }
   }
   .card-btn{
     color: white;
@@ -181,97 +175,80 @@ h1 {
     font-size: 12px;
     position: absolute;
     display: block;
-    bottom: 121px;
+    bottom: 119px;
     left: 35px;
-    padding: 9px 22px;
+    padding: 8px 22px;
     font-family: "ITCAvantGardeStd-DemiCn";
     z-index: 5;
+    &:hover{
+      color: white;
+      text-decoration: none;
+    }
   }
-  .grid-item{
-    margin-right: 11px;
   
+  .card-fixed-width {
+    width: 232px;
   }
-  .card-title{
-    font-family: "ITCAvantGardeStd-DemiCn";
-    color: white;
-    margin-top: 23px;
-    span:first-of-type{
-      text-transform: uppercase;
-      display: block;
-      padding: 0 14px;
-      font-size: 14px;
-      margin-bottom: -4px;
-    }
-    span:last-of-type{
-      font-style: italic;
-      font-size: 14px;
-    }
-    .card-number{
-      font-family: "ITCAvantGardeStd-BkCn";
-      margin-top: 5px;
-      margin-left: 3px;
-      font-size: 14px;
-    }
+  
+  .card-empty-one {
+    height: 500px;
   }
-  .card-col{
-    display: flex;
-    flex-direction: column;
-    &:nth-of-type(2){
-      margin-top: 49px;
-    }
-    &:nth-of-type(3){
-      //margin-top: 272px;
-    }
-    &:not(:last-of-type){
-      margin-right: 23px;
-    }
+  
+  .card-empty-two {
+    height: 186px;
   }
-  .img-cosmetics{
-    left: 0px;
-    top: -513px;
-    position: absolute;
-  }
-  card{
-    display: flex;
-    flex-direction: column;
-  }
-  .card-desc{
+  
+  .card-desc {
     color: white;
     height: 221px;
-    height: 221px;
-    padding-top: 12px;
-    span:first-of-type{
-      position: relative;
+  
+    span:first-of-type {
       display: block;
       font-family: "Didot-Italic";
       text-transform: uppercase;
       padding-left: 7px;
-      font-size: 51px;
-      &:after{
+      font-size: 48px;
+      position: relative;
+      &:before{
         content: "";
-        height: 1px;
-        width: 100%;
         display: block;
-        position: absolute;
-        bottom:3px;
-        left:0;
+        width: 100%;
+        height: 1px;
         background-color: white;
+        position: absolute;
+        bottom:0;
+        left:0;
       }
+  
     }
-    span:last-of-type{
+  
+    span:last-of-type {
       display: block;
       padding-top: 16px;
       font-family: "ITCAvantGardeStd-BkCn";
     }
-    img{
-      display: none;
+  }
+  
+  .card-pink {
+    border-color: #ffd4df;
+    &:after {
+      background-color: #ffd4df;
     }
   }
+  
   .card-white{
     background-color: white;
     border-color: white;
     .card-title{
       color: black;
+      padding: 0 15px;
+  
+      .card-number {
+        font-size: 14px;
+        color: rgb(145,161,164);
+        font-family: "ITCAvantGardeStd-BkCn";
+        text-align: center;
+      }
     }
     &:after{
       width: 45px;
@@ -281,112 +258,91 @@ h1 {
       padding-left: 3px;
     }
   }
+  .card-heart-elem{
+    display: none;
+    p{
+      color: black;
+    }
+  }
+  
   .card-heart{
     background-color: #eed99b;
+    border-color:#eed99b;
     &:after{
       display: none;
     }
-  }
-  .card-desc-mobile{
-    display: none;
-  }
-  .card-title-heart{
-    font-family: "ITCAvantGardeStd-MdCn";
-    color: black;
-  }
-  .container-cards{
-    display: flex;
-  }
-  .img-cosmetics-left{
-    position: absolute;
-    top: -632px;
-    left: -844px;
-  }
-  .card-pink{
-    border-color: #ffd4df;
-    &:after{
-      background-color: #ffd4df;
+    &:hover{
+      .card-hover{
+        display: none !important;
+      }
+    }
+    & *{
+      display: none !important;
+    }
+    .card-heart-elem{
+      display: block !important;
+      padding-top: 56%;
+      font-family: "ITCAvantGardeStd-MdCn";
+      padding-left: 45px;
+      padding-right: 45px;
+      & *{
+        display: block !important;
+      }
+      .fa-heart{
+        color: black;
+        font-size: 31px;
+      }
     }
   }
-  .card-col-img{
-    margin-right: -247px !important;
-  }
-  .card-empty-one{
+  
+  .fake-card-one {
     height: 500px;
-    width: 232px;
   }
-  .card-empty-two{
-    height: 186px;
-    width: 232px;
+  
+  .fake-card-two {
+    height: 536px;
   }
-  .grid{
-    &:first-of-type{
-      margin-bottom: 210px;
-    }
-    &:last-of-type{
-      .grid-item{
-        margin-right: 25px;
-      }
-    }
+  
+  .fake-card-three {
+    height: 190px;
   }
-  .grid-first{
-    z-index: 2;
-  }
-  .card-text{
-    color: white;
-    height: 290px;
-    width: 232px;
-    padding-top: 106px;
-    span{
-      display: block;
-      &:first-of-type{
-        font-style: italic;
-        text-transform: uppercase;
-        font-size: 58px;
-        position: relative;
-        margin-bottom: 20px;
-        &:after{
-          content: '';
-          display: block;
-          width: 100%;
-          height: 1px;
-          background-color: white;
-          position: absolute;
-          bottom:5px;
-          left:0;
-        }
-      }
-      &:last-of-type{
-        font-family: "ITCAvantGardeStd-BkCn";
-      }
-    }
-  }
-  .footer{
-    position: relative;
-  }
-  .img-footer{
+  
+  .top-fake-bg {
     position: absolute;
-    top: -440px;
-    left: 82px;
-    z-index: -1;
+    top: -451px;
+    right: -416px;
   }
-  .footer-logo{
-    padding-top: 460px;
-    text-align: center;
+  
+  .middle-fake-bg {
+    position: absolute;
+    left: -410px;
+    top: 1200px;
+  }
+  
+  .footer-fake-bg {
+    position: absolute;
+    bottom: 270px;
+    left: 83px;
+  }
+  
+  .footer {
+    padding-top: 899px;
+    margin-bottom: 100px;
+    position: relative;
+    z-index: 0;
+    background: url('../images/footer.jpg') no-repeat 82px 0px;
+    margin-top: -449px;
+  }
+  
+  .footer-logo {
     margin-bottom: 20px;
-    img{
+    img {
       height:33px;
     }
   }
-  my-component{
-    position: relative;
-  }
-  .masonry{
-    padding: 62px 0 0 176px;
-  }
+  
   .social-title{
     color: white;
-    text-align: center;
     font-family: "ITCAvantGardeStd-BkCn";
     margin-bottom: 7px;
     span{
@@ -396,9 +352,11 @@ h1 {
       letter-spacing: 2.1px;
     }
   }
+  
   .social-icons{
     text-align: center;
   }
+  
   .social-icon{
     width: 41px;
     height: 41px;
@@ -406,85 +364,109 @@ h1 {
     border: 1px solid white;
     margin-left: 2px;
     display: inline-block;
+    .fa{
+      color: white;
+      font-size: 22px;
+      margin-top: 9px;
+    }
   }
-  @media screen and (max-width:1200px){
-    .container{
-      width: 750px;
-      border: none;
-      left: 0;
+  
+  @media screen and (max-width: 1024px) {
+    .grid {
+      margin-left: 70px;
     }
-    .grid-cosmetics{
-      display: none;
+  
+    .top-fake-bg {
+      top: -386px;
+      right: -356px;
+      width: 700px;
     }
-    .masonry{
-      padding: 0 0 0 65px;
-      margin-top: 46px;
+  
+    .middle-fake-bg {
+      left: -301px;
+      top: 1360px;
+      width: 800px;
     }
-    .card-empty-one{
-      display: none;
+  
+    .footer-fake-bg {
+      width: 800px;
     }
-    .img-cosmetics-left, .card-text, .card-empty-two {
-      //display: none;
+  
+    .fake-card-one {
+      height: 300px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .context {
+      border: 0;
+    }
+  
+    .card-desc {
+      width: 100%;
+      text-align: center;
+      span:first-of-type {
+        width: 300px;
+        margin: auto;
+      }
+    }
+  
+    .static-banner {
       width: 0;
       height: 0;
-      z-index: -1;
       overflow: hidden;
     }
-    .card-desc-mobile{
-      display: block;
-      text-align: center;
-      color: white;
-      font-family: "Didot-Italic";
-      margin-top: -279px;
-      margin-left: 27px;
-      position: relative;
-      z-index: -1;
-      img{
-        width: 100%;
-      }
-      &>span:first-of-type{
-        position: relative;
-        display: block;
-        font-style: italic;
-        text-transform: uppercase;
-        font-size: 58px;
-        margin-top: -62px;
-        &:after{
-          content: "";
-          height: 1px;
-          width: 289px;
-          display: block;
-          position: absolute;
-          bottom: -2px;
-          left: 30.4%;
-          background-color: white;
-        }
-      }
-      p{
-        margin: 0;
-        font-size: 24px;
-        padding-top: 23px;
-        line-height: 1.1;
-        font-family: "ITCAvantGardeStd-BkCn";
-        span{
-          display: block;
-        }
-      }
+  
+    .grid {
+      margin-left: 120px;
     }
-    .card-desc{
-     color:transparent;
-      height: 56px;
-      width: 292px;
-      span:first-of-type{
-        &:after{
-          display: none;
-        }
-      }
+  
+    .for-lp {
+      margin-left: -40px
     }
-    .card{
-      margin-right: 0;
-      width: 292px;
-      height: 451px;
+  }
+  
+  
+  /* header animation at the Beginning */
+  /* START */
+  .logo, .title, .subtitle, .context {
+    opacity: 0;
+    margin-top: 150px;
+  }
+  /* END */
+  
+  /* Effect 2: Move Up */
+  /* START */
+  .grid.effect-2 li.animate {
+    -webkit-transform: translateY(300px);
+    transform: translateY(300px);
+    -webkit-animation: moveUp 0.65s ease forwards;
+    animation: moveUp 0.65s ease forwards;
+  }
+  
+  @-webkit-keyframes moveUp {
+    0% { }
+    100% { -webkit-transform: translateY(0); opacity: 1; }
+  }
+  
+  @keyframes moveUp {
+    0% { }
+    100% { -webkit-transform: translateY(0); transform: translateY(0); opacity: 1; }
+  }
+  /* END */
+  
+  .logo-mobile{
+    display: none;
+  }
+  .mobile-cosmetics{
+    display: none;
+  }
+  .grid-cosmetic{
+    display: none;
+  }
+  @media screen and (max-width: 1200px){
+    .context{
+      border: none !important;
     }
     .logo-desctop{
       display: none;
@@ -492,144 +474,65 @@ h1 {
     .logo-mobile{
       display: inline-block;
     }
-    .main-title{
+    .footer{
+      padding-top: 899px;
+      margin-bottom: 100px;
+      position: relative;
+      z-index: 0;
+      background: url('../images/footer.jpg') no-repeat -74px 0;
+      margin-top: -449px;
+    }
+    .header .title span {
       font-size: 61px;
-      span:first-of-type{
-        margin-top: -11px;
-        margin-left: 32px;
-        letter-spacing: 22px;
-      }
-      span:last-of-type{
-        margin-bottom: 2px;
-      }
+      letter-spacing: 21px;
+      margin-left: 20px;
+      margin-top: 7px;
     }
-    .under-title{
-      margin-top: 51px;
-      &>span{
-        font-family: "ITCAvantGardeStd-DemiCn";
-        display: block;
-        margin-top: 0;
-        margin-left: 6px;
-        letter-spacing: 0.8px;
-        text-transform: uppercase;
-        font-size: 47px;
-        margin-bottom: 0;
-        &:first-of-type{
-          margin-bottom: -6px;
-        }
-      }
-      p{
-        margin-top: 7px;
-        margin-left: 3px;
-        letter-spacing: 1px;
-        font-size: 22px;
-      }
-      p>span{
-        display: block;
-      }
+    .header .title span:last-of-type {
+      margin-top: -26px;
+      margin-left: 27px;
     }
-    .grid-item{
-      margin-right: 33px;
-    }
-    .grid{
-      //width:650px;
-      //margin: auto;
-      &:first-of-type{
-        margin-bottom: 0;
-      }
-    }
-    .card-text{
-      display: none;
-    }
-    .porfum-title{
+    .header .subtitle span {
+      font-size: 46px;
       display: block;
-      color: white;
-      margin-top: -423px;
-      text-align: center;
-      font-family: "Didot-Italic";
-      margin-bottom: 64px;
+      margin-bottom: -15px;
+    }
+    .header .subtitle p {
+      font-size: 24px;
+      margin-top: 12px;
+      line-height: 1.2;
+    }
+    .make-up-mob{
       img{
-        width: 100%;
-      }
-      span{
-        display: block;
-        &:first-of-type{
-          font-style: italic;
-          text-transform: uppercase;
-          font-size: 58px;
-          position: relative;
-          margin-top: -111px;
-          margin-bottom: 20px;
-          &:after{
-            content: "";
-            height: 1px;
-            width: 289px;
-            display: block;
-            position: absolute;
-            bottom: 3px;
-            left: 32%;
-            background-color: white;
-          }
-        }
-        &:last-of-type{
-          font-family: "ITCAvantGardeStd-BkCn";
-        }
+        margin-top: -270px;
+        margin-bottom: -70px;
       }
     }
-    .grid{
-      //margin-left: 100px;
+    .card-desc span:first-of-type{
+      font-size: 57px;
     }
-    .img-footer{
-      top: -396px;
-      left: -103px;
-  
-    }
-    .footer-logo{
-      padding-top: 483px;
-      margin-bottom: 44px;
-      text-align: center;
-      .logo-mobile{
-        height: 79px;
+    .card-desc span:last-of-type{
+      font-size: 21px;
+      br{
+        display: none;
       }
     }
-    .social-title{
-      margin-bottom: 21px;
-      span:first-of-type{
-        font-size: 23px;
-      }
-      span:last-of-type{
-        font-size: 32px;
-        margin-top: 5px;
-      }
-    }
-    .social-icon{
-      width: 90px;
-      height: 90px;
-      margin-left: 5px;
-      margin-right: 5px;
-    }
-    .grid-empty-three{
-      height: 232px !important;
+    .card{
+      margin-right: 0;
       width: 292px;
+      height: 451px;
     }
-    .card-pink{
-      margin-bottom: 38px;
+    .grid {
+      margin-left: 0px;
     }
-  }
-  @media screen and (max-width: 750px){
-    .container{
-      width: 100%;
+    .mobile-cosmetics{
+      display: block;
+        margin-top: -400px;
+        position: relative;
+        z-index: -1;
+       margin-bottom: -226px !important;
     }
-  }
-  
-  @media (max-width: 480px) {
-    .under-title{
-      & > span {
-        font-size: 26px;
-      }
-  
-      p {
-        font-size: 16px;
-      }
+    .grid-cosmetic{
+      display: block;
     }
-  }
+  }  

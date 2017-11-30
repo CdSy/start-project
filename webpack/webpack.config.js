@@ -40,6 +40,7 @@ module.exports = createConfig([
   match(['*.gif', '*.jpg', '*.jpeg', '*.png', '*.webp', '*otf'], [
     file()
   ]),
+  css(),
   less(),
   env('development', [
     devServer(),
@@ -62,7 +63,8 @@ module.exports = createConfig([
     new ExtractTextPlugin('style.css'),
     new webpack.ProvidePlugin({
       $: 'jquery',
-      jQuery: 'jquery'
+      jQuery: 'jquery',
+      _: 'lodash'
     })
   ])
 ])

@@ -286,6 +286,7 @@
 .modal-dialog {
     position: relative;
     width: 750px;
+    margin: 0 !important;
     opacity: 0;
     box-sizing: border-box;
     transition: opacity 0.3s ease;
@@ -391,8 +392,10 @@
         }
 
         .label {
+            display: block;
             margin-bottom: 7px;
             font-size: 16px;
+            color: #000;
             text-transform: uppercase;
             text-align: center;
             font-family: "ITCAvantGardeStd-BoldCn";
@@ -494,12 +497,18 @@
 
     .main-title {
         margin-top: 5px;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 50px;
+        font-family: "ITCAvantGardeStd-BkCn";
 
         span {
             margin-top: -11px;
             // margin-left: 9px;
             letter-spacing: 20px;
             font-size: 53px;
+            display: block;
+            margin-left: 19px;
 
             @media (max-width: 480px) {
                 font-size: 30px;
@@ -572,8 +581,4 @@
         margin: 28px auto;
         background-color: #000;
     }
-}
-
-ngbd-modal-content {
-    width: 100%;
 }

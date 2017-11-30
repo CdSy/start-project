@@ -34,6 +34,12 @@ export class ShoppingCart {
         }
     }
 
+    clearCart() {
+        this.products.length = 0;
+
+        this.render();
+    }
+
     render() {
         let cards = document.createDocumentFragment();
 

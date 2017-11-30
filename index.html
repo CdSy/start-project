@@ -4,10 +4,600 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Start template</title>
-<link href="build/style.css" rel="stylesheet"></head>
+    <title>Main page</title>
+
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.min.css">
+    
+    <script src="./assets/js/jquery-3.2.1.min.js"></script>
+    <script src="./assets/js/modernizr.custom.js"></script>
+    <link href="build/style.css" rel="stylesheet"></head>
 <body>
-    <h1>Hello World!</h1>
-    <div class="card"></div>
-<script type="text/javascript" src="build/common.js.js"></script><script type="text/javascript" src="build/main.js"></script></body>
+    <div class="container-fluid">
+        <div class="container">
+          <div class="header text-center">
+            <div class="logo">
+              <img class="logo-desctop" src="assets/images/logo.png" alt="">
+              <img class="logo-mobile" src="assets/images/logo-mobile.png" alt="">
+            </div>
+            <div class="title">
+              <img src="assets/images/votre.png" alt="votre">
+              <span>wish</span>
+              <span>list</span>
+            </div>
+            <div class="subtitle under-title">
+              <span>Le cadeau idéal est là.</span><span> Qui va vous l’offrir ?</span>
+              <p>
+                Choisissez jusqu’à 4 produits parmi la sélection de nos éditions limitées et coffrets de
+                Noël Dazzling Lights.
+                Vous pourrez alors envoyer votre wishlist à la personne de votre choix.
+              </p>
+            </div>
+          </div>
+        
+        
+          <div class="context">
+        
+            <div class="make-up-mob visible-sm visible-xs">
+              <img src="assets/images/mobile-cosmetics.png" alt="">
+        
+              <div class="card-desc">
+                <span>Make-up</span>
+                <span>
+                  Les étincelles envahissent vos <br> accessoires siglés.<br>
+                  Make-upRetrouvez vos indispensables<br>
+                  produits cultes dans une édition <br> stellaire ultra-collector à laquelle il <br> serait insensé de résister.
+                </span>
+              </div>
+            </div>
+        
+            <ul class="grid grid-first effect-2" id="grid" data-masonry='{ "itemSelector": ".grid-item" }'>
+        
+              <li class="grid-item card-desc static-banner">
+                <span>Make-up</span>
+                <span>
+                  Les étincelles envahissent vos <br> accessoires siglés.<br>
+                  Make-upRetrouvez vos indispensables<br>
+                  produits cultes dans une édition <br> stellaire ultra-collector à laquelle il <br> serait insensé de résister.
+                </span>
+              </li>
+        
+              <li class="grid-item card card-fixed-width card-white js-product-card" data-id="1" data-thumbnail="./assets/images/2.png">
+                <img src="assets/images/2.png" alt="">
+                <div class="card-title">
+                  <span>ROUGE PUR COUTURE COLLECTOR</span>
+                  <span>Dazzling Lights</span>
+                  <div class="card-number">
+                    N°13 Le Orange
+                  </div>
+                </div>
+                <div class="card-hover">
+                  <img src="assets/images/heart.png" alt="">
+                  <button href="" class="card-btn js-adding-button">
+                    ajouter à ma wishlist
+                  </button>
+                </div>
+                <div class="card-heart-elem">
+                  <i class="fa fa-heart" aria-hidden="true"></i>
+                  <p>Le produit a été ajouté  à votre wishlist.</p>
+                </div>
+              </li>
+        
+              <li class="grid-item fake-card-one card-fixed-width hidden-sm hidden-xs"></li>
+        
+              <li class="grid-item card card-fixed-width js-product-card" data-id="2" data-thumbnail="./assets/images/2.png">
+                <img src="assets/images/1.png" alt="">
+                <div class="card-title">
+                  <span>ROUGE PUR COUTURE COLLECTOR</span>
+                  <span>Dazzling Lights</span>
+                  <div class="card-number">
+                    N°13 Le Orange
+                  </div>
+                </div>
+                <div class="card-hover">
+                  <img src="assets/images/heart.png" alt="">
+                  <button href="" class="card-btn js-adding-button">
+                    ajouter à ma wishlist
+                  </button>
+                </div>
+                <div class="card-heart-elem">
+                  <i class="fa fa-heart" aria-hidden="true"></i>
+                  <p>Le produit a été ajouté  à votre wishlist.</p>
+                </div>
+              </li>
+        
+              <li class="grid-item card card-fixed-width ">
+                <img src="assets/images/3.png" alt="">
+                <div class="card-title">
+                  <span>ROUGE PUR COUTURE COLLECTOR</span>
+                  <span>2</span>
+                  <div class="card-number">
+                    3
+                  </div>
+                </div>
+                <div class="card-hover">
+                  <img src="assets/images/heart.png" alt="">
+                  <button href="" class="card-btn">
+                    ajouter à ma wishlist
+                  </button>
+                </div>
+                <div class="card-heart-elem">
+                  <i class="fa fa-heart" aria-hidden="true"></i>
+                  <p>Le produit a été ajouté  à votre wishlist.</p>
+                </div>
+              </li>
+        
+              <li class="grid-item card card-fixed-width ">
+                <img src="assets/images/3.png" alt="">
+                <div class="card-title">
+                  <span>1</span>
+                  <span>2</span>
+                  <div class="card-number">
+                    3
+                  </div>
+                </div>
+                <div class="card-hover">
+                  <img src="assets/images/heart.png" alt="">
+                  <button href="" class="card-btn">
+                    ajouter à ma wishlist
+                  </button>
+                </div>
+                <div class="card-heart-elem">
+                  <i class="fa fa-heart" aria-hidden="true"></i>
+                  <p>Le produit a été ajouté  à votre wishlist.</p>
+                </div>
+              </li>
+        
+              <li class="grid-item card card-fixed-width ">
+                <img src="assets/images/4.png" alt="">
+                <div class="card-title">
+                  <span>1</span>
+                  <span>2</span>
+                  <div class="card-number">
+                    3
+                  </div>
+                </div>
+              </li>
+        
+              <li class="grid-item card card-fixed-width card-white">
+                <img src="assets/images/6.png" alt="">
+                <div class="card-title">
+                  <span>1</span>
+                  <span>2</span>
+                  <div class="card-number">
+                    3
+                  </div>
+                </div>
+                <div class="card-hover">
+                  <img src="assets/images/heart.png" alt="">
+                  <button href="" class="card-btn">
+                    ajouter à ma wishlist
+                  </button>
+                </div>
+                <div class="card-heart-elem">
+                  <i class="fa fa-heart" aria-hidden="true"></i>
+                  <p>Le produit a été ajouté  à votre wishlist.</p>
+                </div>
+              </li>
+        
+              <li class="grid-item card card-fixed-width card-white">
+                <img src="assets/images/6.png" alt="">
+                <div class="card-title">
+                  <span>ROUGE PUR COUTURE COLLECTOR</span>
+                  <span>Dazzling Lights</span>
+                  <div class="card-number">
+                    N°13 Le Orange
+                  </div>
+                </div>
+                <div class="card-hover">
+                  <img src="assets/images/heart.png" alt="">
+                  <button href="" class="card-btn">
+                    ajouter à ma wishlist
+                  </button>
+                </div>
+                <div class="card-heart-elem">
+                  <i class="fa fa-heart" aria-hidden="true"></i>
+                  <p>Le produit a été ajouté  à votre wishlist.</p>
+                </div>
+              </li>
+        
+              <li class="grid-item card card-fixed-width card-white">
+                <img src="assets/images/7.png" alt="">
+                <div class="card-title">
+                  <span>ROUGE PUR COUTURE COLLECTOR</span>
+                  <span>Dazzling Lights</span>
+                  <div class="card-number">
+                    N°13 Le Orange
+                  </div>
+                </div>
+                <div class="card-hover">
+                  <img src="assets/images/heart.png" alt="">
+                  <button href="" class="card-btn">
+                    ajouter à ma wishlist
+                  </button>
+                </div>
+                <div class="card-heart-elem">
+                  <i class="fa fa-heart" aria-hidden="true"></i>
+                  <p>Le produit a été ajouté  à votre wishlist.</p>
+                </div>
+              </li>
+        
+              <li class="grid-item card card-fixed-width card-white">
+                <img src="assets/images/8.png" alt="">
+                <div class="card-title">
+                  <span>ROUGE PUR COUTURE COLLECTOR</span>
+                  <span>Dazzling Lights</span>
+                  <div class="card-number">
+                    N°13 Le Orange
+                  </div>
+                </div>
+                <div class="card-hover">
+                  <img src="assets/images/heart.png" alt="">
+                  <div class="card-hover">
+                    <img src="assets/images/heart.png" alt="">
+                    <button href="" class="card-btn">
+                      ajouter à ma wishlist
+                    </button>
+                  </div>
+                  <div class="card-heart-elem">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                    <p>Le produit a été ajouté  à votre wishlist.</p>
+                  </div>
+                </div>
+              </li>
+        
+              <li class="grid-item card card-fixed-width card-white">
+                <img src="assets/images/9.png" alt="">
+                <div class="card-title">
+                  <span>ROUGE PUR COUTURE COLLECTOR</span>
+                  <span>Dazzling Lights</span>
+                  <div class="card-number">
+                    N°13 Le Orange
+                  </div>
+                </div>
+                <div class="card-hover">
+                  <img src="assets/images/heart.png" alt="">
+                  <button href="" class="card-btn">
+                    ajouter à ma wishlist
+                  </button>
+                </div>
+                <div class="card-heart-elem">
+                  <i class="fa fa-heart" aria-hidden="true"></i>
+                  <p>Le produit a été ajouté  à votre wishlist.</p>
+                </div>
+              </li>
+        
+              <li class="grid-item fake-card-two card-fixed-width hidden-sm hidden-xs"></li>
+              <li class="grid-item fake-card-three card-fixed-width hidden-sm hidden-xs"></li>
+        
+              <li class="grid-item card-desc card-fixed-width for-lp" style="height: 358px;">
+                <div style="height: 232px;"></div>
+                <span>Parfum</span>
+                <span>L’attraction est irrésistible.</span>
+              </li>
+              <li class="grid-cosmetic grid-item card-desc card-fixed-width for-lp" style="height: 650px;">
+                <div style="height: 0px;"></div>
+                <img src="assets/images/mobile-cosmetics-left.png" alt="">
+                <span>Parfum</span>
+                <span>L’attraction est irrésistible.</span>
+              </li>
+        
+              <li class="grid-item card card-fixed-width card-white">
+                <img src="assets/images/pomade.png" alt="">
+                <div class="card-title">
+                  <span>ROUGE PUR COUTURE COLLECTOR</span>
+                  <span>Dazzling Lights</span>
+                  <div class="card-number">
+                    N°13 Le Orange
+                  </div>
+                </div>
+                <div class="card-hover">
+                  <img src="assets/images/heart.png" alt="">
+                  <button href="" class="card-btn">
+                    ajouter à ma wishlist
+                  </button>
+                </div>
+                <div class="card-heart-elem">
+                  <i class="fa fa-heart" aria-hidden="true"></i>
+                  <p>Le produit a été ajouté  à votre wishlist.</p>
+                </div>
+              </li>
+        
+              <li class="grid-item card card-fixed-width card-white">
+                <img src="assets/images/pomade.png" alt="">
+                <div class="card-title">
+                  <span>ROUGE PUR COUTURE COLLECTOR</span>
+                  <span>Dazzling Lights</span>
+                  <div class="card-number">
+                    N°13 Le Orange
+                  </div>
+                </div>
+                <div class="card-hover">
+                  <img src="assets/images/heart.png" alt="">
+                  <button href="" class="card-btn">
+                    ajouter à ma wishlist
+                  </button>
+                </div>
+                <div class="card-heart-elem">
+                  <i class="fa fa-heart" aria-hidden="true"></i>
+                  <p>Le produit a été ajouté  à votre wishlist.</p>
+                </div>
+              </li>
+        
+              <li class="grid-item card card-fixed-width card-white">
+                <img src="assets/images/pomade.png" alt="">
+                <div class="card-title">
+                  <span>ROUGE PUR COUTURE COLLECTOR</span>
+                  <span>Dazzling Lights</span>
+                  <div class="card-number">
+                    N°13 Le Orange
+                  </div>
+                </div>
+                <div class="card-hover">
+                  <img src="assets/images/heart.png" alt="">
+                  <button href="" class="card-btn">
+                    ajouter à ma wishlist
+                  </button>
+                </div>
+                <div class="card-heart-elem">
+                  <i class="fa fa-heart" aria-hidden="true"></i>
+                  <p>Le produit a été ajouté  à votre wishlist.</p>
+                </div>
+              </li>
+        
+              <li class="grid-item card card-fixed-width card-white">
+                <img src="assets/images/pomade.png" alt="">
+                <div class="card-title">
+                  <span>ROUGE PUR COUTURE COLLECTOR</span>
+                  <span>Dazzling Lights</span>
+                  <div class="card-number">
+                    N°13 Le Orange
+                  </div>
+                </div>
+                <div class="card-hover">
+                  <img src="assets/images/heart.png" alt="">
+                  <button href="" class="card-btn">
+                    ajouter à ma wishlist
+                  </button>
+                </div>
+                <div class="card-heart-elem">
+                  <i class="fa fa-heart" aria-hidden="true"></i>
+                  <p>Le produit a été ajouté  à votre wishlist.</p>
+                </div>
+              </li>
+        
+              <li class="grid-item card card-fixed-width card-white">
+                <img src="assets/images/pomade.png" alt="">
+                <div class="card-title">
+                  <span>ROUGE PUR COUTURE COLLECTOR</span>
+                  <span>Dazzling Lights</span>
+                  <div class="card-number">
+                    N°13 Le Orange
+                  </div>
+                </div>
+                <div class="card-hover">
+                  <img src="assets/images/heart.png" alt="">
+                  <button href="" class="card-btn">
+                    ajouter à ma wishlist
+                  </button>
+                </div>
+                <div class="card-heart-elem">
+                  <i class="fa fa-heart" aria-hidden="true"></i>
+                  <p>Le produit a été ajouté  à votre wishlist.</p>
+                </div>
+              </li>
+        
+              <li class="grid-item card card-fixed-width card-white">
+                <img src="assets/images/pomade.png" alt="">
+                <div class="card-title">
+                  <span>ROUGE PUR COUTURE COLLECTOR</span>
+                  <span>Dazzling Lights</span>
+                  <div class="card-number">
+                    N°13 Le Orange
+                  </div>
+                </div>
+                <div class="card-hover">
+                  <img src="assets/images/heart.png" alt="">
+                  <button href="" class="card-btn">
+                    ajouter à ma wishlist
+                  </button>
+                </div>
+                <div class="card-heart-elem">
+                  <i class="fa fa-heart" aria-hidden="true"></i>
+                  <p>Le produit a été ajouté  à votre wishlist.</p>
+                </div>
+              </li>
+        
+              <li class="grid-item card card-fixed-width card-white">
+                <img src="assets/images/pomade.png" alt="">
+                <div class="card-title">
+                  <span>ROUGE PUR COUTURE COLLECTOR</span>
+                  <span>Dazzling Lights</span>
+                  <div class="card-number">
+                    N°13 Le Orange
+                  </div>
+                </div>
+                <div class="card-hover">
+                  <img src="assets/images/heart.png" alt="">
+                  <button href="" class="card-btn">
+                    ajouter à ma wishlist
+                  </button>
+                </div>
+                <div class="card-heart-elem">
+                  <i class="fa fa-heart" aria-hidden="true"></i>
+                  <p>Le produit a été ajouté  à votre wishlist.</p>
+                </div>
+              </li>
+        
+            </ul>
+        
+            <img class="top-fake-bg hidden-sm hidden-xs" src="assets/images/cosmetics.png" alt="">
+        
+            <img class="middle-fake-bg hidden-sm hidden-xs" src="assets/images/cosmetics-left.png" alt="">
+        
+        
+        
+            <div class="footer text-center">
+              <div class="footer-logo">
+                <img src="assets/images/logo.png" alt="">
+              </div>
+              <div class="social">
+                <div class="social-title">
+                  <span>REJOIGNEZ LA COMMUNAUTÉ YSL</span>
+                  <span>#YSLbeauty</span>
+                </div>
+                <div class="social-icons">
+                  <div class="social-icon facebook">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </div>
+                  <div class="social-icon insta">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                  </div>
+                  <div class="social-icon youtube">
+                    <i class="fa fa-youtube" aria-hidden="true"></i>
+                  </div>
+                  <div class="social-icon twitter">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+          </div>
+        </div>
+    </div>
+
+    <div class="fixed-header js-sticky-element js-shopping-cart">
+        <img src="./assets/images/abbr-logo.png" alt="YSL" class="abbr-logo">
+        <div class="logo">
+          <img src="./assets/images/votre-black.png" alt="votre" class="votre-image">
+          <div class="large-text">wishlist</div>
+          <div class="small-text">Votre sélection de produits YSL</div>
+        </div>
+        <div class="mock-items">
+          <div class="empty-item"></div>
+          <div class="empty-item"></div>
+          <div class="empty-item"></div>
+          <div class="empty-item"></div>
+          <div class="items-wrapper js-render-place">
+            <!-- <div class="item js-product-item" style="background-image: url('./assets/images/pomade.png')">
+              <div class="small-cross js-removing-button"></div>
+            </div>
+            <div class="item js-product-item" style="background-image: url('./assets/images/pomade.png')">
+              <div class="small-cross js-removing-button"></div>
+            </div>
+            <div class="item js-product-item" style="background-image: url('./assets/images/pomade.png')">
+              <div class="small-cross js-removing-button"></div>
+            </div> -->
+          </div>
+        </div>
+        <div class="button-wrapper">
+           <button class="button js-modal-trigger">  
+            <span class="text">envoyer ma wishlist</span>
+          </button>
+          <div class="text">Vous avez <span class="js-product-counter">0</span> produits dans votre wislist</div>
+        </div>
+    </div>
+
+    <div class="modal" id="form-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="top-logo">
+                  <img src="./assets/images/logo.png" alt="">
+                </div>
+                <div class="main-title black">
+                  <img src="./assets/images/votre-black.png" class="italic-text-image" alt="">
+                  <span>wish</span>
+                  <span>list</span>
+                </div>
+                <div class="description">
+                  Votre sélection de produits YSL
+                </div>
+                <div class="items js-render-place">
+                  <!-- <div class="item" 
+                       style="background-image: url('./assets/images/pomade.png')">
+                  </div>
+                  <div class="item" 
+                       style="background-image: url('./assets/images/pomade.png')">
+                  </div> -->
+                </div>
+                <form class="f-form js-form">
+                  <div class="f-field">
+                    <div class="label">
+                      Envoyer ma wishlist à
+                    </div>
+                    <input type="email" 
+                           name="email"
+                           placeholder="email" 
+                           class="input"
+                           pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                           required>
+                    <!-- <div [hidden]="emailRef.valid"
+                         class="alert-danger">
+                      Email is required
+                    </div> -->
+                  </div>
+                  <div class="f-field">
+                    <div class="label">
+                      Laissez-lui un message
+                    </div>
+                    <textarea placeholder="Votre message" [(ngModel)]="message" name="message" class="textarea"></textarea>
+                  </div>
+                  <button class="button wide" type="submit">
+                    Envoyer ma wishlist à
+                  </button>
+                </form>
+                <div class="close-cross" data-dismiss="modal"></div>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal" id="success-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="top-logo">
+                <img src="./assets/images/logo.png" alt="">
+            </div>
+            <div class="main-title black">
+              <img src="./assets/images/votre-black.png" class="italic-text-image" alt="">
+              <span>wish</span>
+              <span>list</span>
+            </div>
+            <div class="description">
+              Votre sélection de produits YSL
+            </div>
+            <div class="items js-render-place">
+                <!-- <div class="item" 
+                     style="background-image: url('./assets/images/pomade.png')">
+                </div>
+                <div class="item" 
+                     style="background-image: url('./assets/images/pomade.png')">
+                </div> -->
+            </div>
+            <div>
+              <div class="success-text">
+                <div class="title">merci !</div>
+                Votre sélection de produits YSL a été envoyée à
+                <div class="email">angelique.stern@avent-media.fr</div>
+                <div class="divider"></div>
+                <div class="title">invitez vos amiEs <br> à créer leur wishlist</div>
+              </div>
+              <button class="button">
+                JE PARTAGE
+              </button>
+              <div class="socials">
+                <a href="#" class="icon facebook"></a>
+                <a href="#" class="icon twitter"></a>
+              </div>
+            </div>
+            <div class="close-cross" data-dismiss="modal"></div>
+          </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./assets/js/masonry.pkgd.min.js"></script>
+    <script type="text/javascript" src="./assets/js/imagesloaded.js"></script>
+    <script type="text/javascript" src="./assets/js/classie.js"></script>
+    <script type="text/javascript" src="./assets/js/AnimOnScroll.js"></script>
+    <script type="text/javascript" src="build/common.js"></script><script type="text/javascript" src="build/main.js"></script></body>
 </html>

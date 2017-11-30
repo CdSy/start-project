@@ -1,3 +1,8 @@
+// import 'masonry-layout/dist/masonry.pkgd.min.js';
+// import '../assets/js/imagesloaded.js';
+// import '../assets/js/classie.js';
+// import '../assets/js/AnimOnScroll.js';
+// import '../assets/js/modernizr.custom.js';
 import 'bootstrap-less/js/modal.js';
 import  '../less/main.less';
 
@@ -10,7 +15,7 @@ function calculateScroll() {
     const header = $('.js-sticky-element');
     let activeState = false;
 
-    $(document).on('scroll', (event) => {
+    $(document).on('scroll', _.throttle((event) => {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
         if (activeState === false && scrollTop > 200) {
@@ -22,7 +27,49 @@ function calculateScroll() {
             header.removeClass('visible');
             activeState = false;
         }
+    }, 150));
+}
+
+function initMasonry() {
+    $('#grid').each(function() {
+        new Masonry($(this), {
+          // options
+          itemSelector: 'li',
+          columnWidth: 232
+        });
     });
+    
+    var $grid = document.getElementById('grid');
+
+    new AnimOnScroll($grid, {
+        minDuration: 0.7,
+        maxDuration: 1,
+        viewportFactor: -0.5
+    });
+
+    $('.logo').animate({
+      marginTop: 0,
+      opacity: 1
+    }, 500, function() {
+      $('.title').animate({
+        marginTop: 0,
+        opacity: 1
+      }, 500, function() {
+        $('.subtitle').animate({
+          marginTop: 0,
+          opacity: 1
+        }, 500, function() {
+          $('.context').animate({
+            marginTop: 0,
+            opacity: 1
+          }, 500);
+        });
+      });
+    });
+    
+    $(".card-btn").click(function () {
+        $(this).closest(".card").toggleClass("card-heart");
+    })
 }
 
 export class Application {
@@ -77,6 +124,7 @@ $(function() {
         });
     }
 
+    initMasonry();
     calculateScroll();
     initModals();
     bindEvents();
